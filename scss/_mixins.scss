@@ -1,0 +1,8 @@
+@mixin rounding {
+	border-radius: 0 0 5% 5%;
+	box-shadow: 0.25rem 0.75rem 0.25rem 0.75rem $banner-background;
+}
+@mixin font-styling {
+	text-shadow: 0 0 0.75rem $text-shadow;
+	color: $font-color;
+}
