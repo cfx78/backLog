@@ -32,5 +32,15 @@ html {
 }
 
 p {
-	padding-top: 40rem;
+	padding-top: 1rem;
+}
+
+#main-carousel {
+	padding-top: 30vh;
+	overflow: hidden;
+
+	img {
+		max-height: 85vh;
+		object-fit: fill;
+	}
 }

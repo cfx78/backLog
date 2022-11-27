@@ -16,7 +16,6 @@ html {
 
 .welcome {
   position: relative;
-  padding-top: 10vh;
   text-shadow: 0 0 0.75rem #bbe1fa;
   color: white;
   font-family: "Press Start 2P", cursive;
@@ -48,7 +47,16 @@ html {
 }
 
 p {
-  padding-top: 40rem;
+  padding-top: 1rem;
+}
+
+#main-carousel {
+  padding-top: 30vh;
+  overflow: hidden;
+}
+#main-carousel img {
+  max-height: 85vh;
+  object-fit: fill;
 }
 
 /*# sourceMappingURL=style.css.map */
