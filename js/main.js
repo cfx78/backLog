@@ -1,7 +1,7 @@
 import User from './objcons.js';
 import Person from './classes.js';
 import newUser from './factfunc.js';
-import { p1, p2 } from './arrproms.js';
+import { requestOptions, p1, options, p2 } from './arrproms.js';
 
 //Import
 let user01 = new User('ivo04', 'ivo@yahoo.com', 'password');
@@ -44,6 +44,10 @@ let user05 = newUser('buckXP', 'bxp@yahoo.com', 'password');
 user05.cnslMsg();
 
 //Array of promises
-Promise.all([p1, p2]).then((res) => {
-	console.log(res);
-});
+Promise.all([p1, p2])
+	.then((res) => {
+		console.log(res);
+	})
+	.catch((err) => {
+		console.log(err);
+	});
