@@ -1,3 +1,4 @@
+import fetch from 'node-fetch';
 //Movie Database
 export var requestOptions = {
 	method: 'GET',
@@ -7,7 +8,10 @@ export var requestOptions = {
 export let p1 = fetch(
 	'https://api.themoviedb.org/3/find/tt0137523?api_key=b265254358428aa197cc46c74fc8c596&language=en-US&external_source=imdb_id',
 	requestOptions,
-).then((response) => response.json());
+)
+	.then((response) => response.json())
+	.then((resolve) => resolve.movie_results[0])
+	.then((results) => results.title);
 
 //VideoGame Database
 
@@ -22,4 +26,6 @@ export const options = {
 export let p2 = fetch(
 	'https://opencritic-api.p.rapidapi.com/game/8351',
 	options,
-).then((response) => response.json());
+)
+	.then((response) => response.json())
+	.then((res) => res.name);
