@@ -1,4 +1,3 @@
-import fetch from 'node-fetch';
 //Movie Database
 export var requestOptions = {
 	method: 'GET',

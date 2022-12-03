@@ -1,9 +1,12 @@
-import fetch from 'node-fetch';
+import logo from '../src/images/logo2.png';
+import '../src/scss/style.scss';
 import User from './objcons.js';
 import Person from './classes.js';
-import newUser from './factfunc.js';
+import newUser from './factfunc';
 import { requestOptions, p1, options, p2 } from './arrproms.js';
-import chalk from '../node_modules/chalk/source/index.js';
+
+const logoImg = document.getElementById('logoImg');
+logoImg.src = logo;
 //Import
 let user01 = new User('ivo04', 'ivo@yahoo.com', 'password');
 
@@ -11,7 +14,7 @@ console.log(user01);
 
 //Prototype
 User.prototype.log = function () {
-	console.log(chalk.bgBlueBright(this.userName, this.email, this.password));
+	console.log(this.userName, this.email, this.password);
 };
 
 let user02 = new User('j.lee', 'miles@yahoo.com', 'password');
@@ -31,7 +34,7 @@ function Mod(...args) {
 Mod.prototype = Object.create(User.prototype);
 
 Mod.prototype.message = function () {
-	console.log(chalk.bold(this.access));
+	console.log(this.access);
 	return this;
 };
 let user04 = new Mod('cfx789', 'cfx@yahoo.com', 'password');
@@ -47,7 +50,7 @@ user05.cnslMsg();
 //Array of promises
 Promise.all([p1, p2])
 	.then((res) => {
-		console.log(chalk.underline(res));
+		console.log(res);
 	})
 	.catch((err) => {
 		console.log(err);

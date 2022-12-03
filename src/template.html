@@ -11,15 +11,12 @@
 			integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
 			crossorigin="anonymous" />
 			<!-- JavaScript Bundle with Popper -->
-
-		<link rel="stylesheet" href="css\style.css" />
-
-		<title>backLog</title>
+		<title><%= htmlWebpackPlugin.options.title %></title>
 	</head>
 	<body>
 		<nav class="navbar navbar-dark">
 			<div class="container-fluid">
-				<a class="navbar-brand" href="#"><img  src="images/logo2.png" alt="" width="100%" height="45"></a>
+				<a class="navbar-brand" href="#"><img  id="logoImg" alt="" width="100%" height="45"></a>
 				<button
 					class="navbar-toggler"
 					type="button"
@@ -88,9 +85,6 @@
 			<span class="fs-6 ">This is designed for people who always say "I'll play/watch that later". Before you know it you forget to what these things were. Now you, can log what games, movies, and shows that you have finished or need to finish.</span>
 		</div>
 		</div>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-		<script src="./node_modules/axios/dist/axios.min.js"></script>
-		<script type="module" src="dist/main.js"></script>
 
 <script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

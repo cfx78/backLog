@@ -1,18 +1,17 @@
-import chalk from 'chalk';
 import User from './objcons.js';
 
 //Extends = class inheritance
 export default class Person extends User {
 	displayUserName() {
-		console.log(chalk.magentaBright(this.userName));
+		console.log(this.userName);
 		return this;
 	}
 	displayUserEmail() {
-		console.log(chalk.blackBright(this.email));
+		console.log(this.email);
 		return this;
 	}
 	displayPassword() {
-		console.log(chalk.whiteBright(this.password));
+		console.log(this.password);
 		return this;
 	}
 }
