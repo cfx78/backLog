@@ -15,3 +15,21 @@ export default class Person extends User {
 		return this;
 	}
 }
+
+class Shoe {
+	constructor(company) {
+		this.company = company;
+	}
+}
+
+class Model extends Shoe {
+	constructor(company, make, size, color) {
+		super(company);
+		this.make = make;
+		this.size = size;
+		this.color = color;
+	}
+}
+
+let myShoe = new Model('Converse', 'Chuck Taylor All-Star', 'orange');
+console.log(myShoe);
