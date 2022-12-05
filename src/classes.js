@@ -29,7 +29,8 @@ class Model extends Shoe {
 		this.size = size;
 		this.color = color;
 	}
+	getOrder = () => this.company + this.make + this.size + this.color;
 }
 
-let myShoe = new Model('Converse', 'Chuck Taylor All-Star', 'orange');
-console.log(myShoe);
+let myShoe = new Model('Converse ', 'Chuck Taylor All-Star ', 11, ' orange');
+console.log(myShoe.getOrder());
