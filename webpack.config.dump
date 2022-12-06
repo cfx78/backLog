@@ -1,0 +1,39 @@
+module.exports = () => ({
+  context: 'C:\\Users\\corte\\Documents\\GitHub\\backLog',
+  devServer: {
+    static: { directory: 'C:\\Users\\corte\\Documents\\GitHub\\backLog\\dist' },
+    open: true,
+    hot: true,
+    compress: true,
+    historyApiFallback: true
+  },
+  devtool: 'source-map',
+  infrastructureLogging: {
+    stream: {
+      _eventsCount: 1,
+      columns: 92,
+      rows: 19,
+      _type: 'tty',
+      fd: 2,
+      _isStdio: true
+    },
+    level: 'info',
+    colors: true
+  },
+  mode: 'development',
+  output: {
+    assetModuleFilename: '[name][ext]',
+    clean: true,
+    enabledChunkLoadingTypes: [ '...' ],
+    enabledLibraryTypes: [ '...' ],
+    enabledWasmLoadingTypes: [ '...' ],
+    filename: '[name][contenthash].js',
+    path: 'C:\\Users\\corte\\Documents\\GitHub\\backLog\\dist',
+    publicPath: '/'
+  },
+  plugins: [
+    { version: 5 },
+    { outputPath: './', name: 'webpack.config.dump', depth: 4 }
+  ],
+  stats: { preset: 'normal', colors: true }
+})

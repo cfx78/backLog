@@ -1,5 +1,5 @@
-//Movie Database
-export var requestOptions = {
+//* Movie Database
+var requestOptions = {
 	method: 'GET',
 	redirect: 'follow',
 };
@@ -12,9 +12,9 @@ export let p1 = fetch(
 	.then((resolve) => resolve.movie_results[0])
 	.then((results) => results.title);
 
-//VideoGame Database
+//* VideoGame Database
 
-export const options = {
+const optionsVGDB = {
 	method: 'GET',
 	headers: {
 		'X-RapidAPI-Key': '57f0506ec1msh9af3927f987a346p16bdd0jsn2a42a6362eb5',
@@ -24,7 +24,22 @@ export const options = {
 
 export let p2 = fetch(
 	'https://opencritic-api.p.rapidapi.com/game/8351',
-	options,
+	optionsVGDB,
 )
 	.then((response) => response.json())
 	.then((res) => res.name);
+
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '57f0506ec1msh9af3927f987a346p16bdd0jsn2a42a6362eb5',
+		'X-RapidAPI-Host': 'spotify23.p.rapidapi.com',
+	},
+};
+
+export let p3 = fetch(
+	'https://spotify23.p.rapidapi.com/search/?q=Because%20The%20Internet&type=multi&offset=0&limit=10&numberOfTopResults=5',
+	options,
+)
+	.then((response) => response.json())
+	.then((res) => res.albums.items[0].data.name);

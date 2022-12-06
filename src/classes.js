@@ -1,6 +1,6 @@
 import User from './objcons.js';
 
-//Extends = class inheritance
+//* Extends = class inheritance
 export default class Person extends User {
 	displayUserName() {
 		console.log(this.userName);
