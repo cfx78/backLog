@@ -29,6 +29,9 @@ class Model extends Shoe {
 		this.size = size;
 		this.color = color;
 	}
+	getMake = () => this.make;
+	getSize = () => this.size;
+	getColor = () => this.color;
 	getOrder = () => this.company + this.make + this.size + this.color;
 }
 

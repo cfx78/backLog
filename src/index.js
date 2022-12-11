@@ -38,7 +38,7 @@ Mod.prototype.message = function () {
 };
 let user04 = new Mod('cfx789', 'cfx@yahoo.com', 'password');
 
-user04.log();
+console.log(user04);
 console.log(user04.message());
 
 //* Factory Function

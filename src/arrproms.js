@@ -36,7 +36,7 @@ const options = {
 		'X-RapidAPI-Host': 'spotify23.p.rapidapi.com',
 	},
 };
-
+//* Spotify database
 export let p3 = fetch(
 	'https://spotify23.p.rapidapi.com/search/?q=Because%20The%20Internet&type=multi&offset=0&limit=10&numberOfTopResults=5',
 	options,

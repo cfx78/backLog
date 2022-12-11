@@ -3,6 +3,15 @@ export default function greetUser(userName, email, password) {
 		userName,
 		email,
 		password,
+		getName() {
+			return userName;
+		},
+		getEmail() {
+			return email;
+		},
+		getPassword() {
+			return password;
+		},
 		cnslMsg() {
 			return (
 				'Hi ' +
