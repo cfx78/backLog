@@ -41,14 +41,7 @@ document.querySelector('.grid-item3').innerHTML = user02.log();
 let user03 = new Person('hokage07', 'cjb@yahoo.com', 'password');
 
 user03.displayUserName().displayUserEmail().displayPassword();
-document.querySelector('.grid-item4').innerHTML =
-	'<ul><li>' +
-	user03.userName +
-	'</li><li>' +
-	user03.email +
-	'</li><li>' +
-	user03.password +
-	'</li></ul>';
+document.querySelector('.grid-item4').innerHTML = user03.log();
 
 //* Prototype Inheritance
 function Mod(...args) {
