@@ -46,4 +46,4 @@ class Model extends Shoe {
 
 let myShoe = new Model('Converse ', 'Chuck Taylor All-Star ', 11, ' orange');
 console.log(myShoe.getOrder());
-document.querySelector('.grid-item1').innerHTML = myShoe.getOrder();
+document.querySelector('.grid-item2').innerHTML = myShoe.getOrder();

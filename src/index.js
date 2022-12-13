@@ -11,7 +11,7 @@ logoImg.src = logo;
 let user01 = new User('ivo04', 'ivo@yahoo.com', 'password');
 
 console.log(user01);
-document.querySelector('.grid-item2').innerHTML =
+document.querySelector('.grid-item1').innerHTML =
 	'<ul><li>' +
 	user01.userName +
 	'</li><li>' +
