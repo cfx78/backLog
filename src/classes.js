@@ -32,8 +32,18 @@ class Model extends Shoe {
 	getMake = () => this.make;
 	getSize = () => this.size;
 	getColor = () => this.color;
-	getOrder = () => this.company + this.make + this.size + this.color;
+	getOrder = () =>
+		'<ul><li>' +
+		this.company +
+		'</li><li>' +
+		this.make +
+		'</li><li>' +
+		this.size +
+		'</li><li>' +
+		this.color +
+		'</li></ul>';
 }
 
 let myShoe = new Model('Converse ', 'Chuck Taylor All-Star ', 11, ' orange');
 console.log(myShoe.getOrder());
+document.querySelector('.grid-item1').innerHTML = myShoe.getOrder();
