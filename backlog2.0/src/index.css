@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+body {
+    background-image: url(bkgrnd.jpg);
+    background-color: rgba(0, 0, 0, 0.772);
+    background-blend-mode: multiply;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+    color: ghostwhite;
+}
+.grid-p-container {
+    font-size: 2rem;
+}
+
+.log-types {
+    display: inline;
+    color: aqua;
+}
+.B {
+    font-size: 6rem;
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+header {
+    border-bottom: 0.3rem ghostwhite solid;
+    padding: 1rem;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header h2 {
+    border: 0.2rem ghostwhite solid;
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    height: 100vh;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.grid-form a {
+    text-decoration: none;
+    color: ghostwhite;
+}
+.grid-greeting {
+    align-self: flex-start;
+    margin-top: 8rem;
+    font-size: 1.5rem;
+    margin-right: 8rem;
+    padding: 4rem;
+}
+.grid-greeting h1 {
+    margin-bottom: 2rem;
+    text-decoration: underline;
+    letter-spacing: 0.5rem;
+}
+.grid-greeting p {
+    letter-spacing: 0.1rem;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    align-self: center;
+    align-content: center;
+    font-size: 1.7rem;
+    padding: 1rem;
+    letter-spacing: 0.15rem;
+}
+form h4 {
+    border-bottom: 0.3rem ghostwhite solid;
+    display: inline-block;
+}
+a {
+    transition: all 0.25s;
+}
+
+a:hover {
+    letter-spacing: 0.35rem;
+}
+
+footer {
+    border-top: 0.3rem ghostwhite solid;
+    padding: 1rem;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    position: fixed;
+    bottom: 0%;
+    height: 3rem;
+}
+
+footer a {
+    color: ghostwhite;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 945px) {
+    .B {
+        font-size: 2.1rem;
+        line-height: 2.4rem;
+        margin: 0;
+        padding: 0%;
+    }
+    .grid-p-container {
+        font-size: 1.7rem;
+    }
+    br {
+        display: none;
+    }
+    .grid-container {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .grid-greeting {
+        font-size: 1.5rem;
+        margin: 0%;
+        max-width: 30em;
+        margin-top: 2rem;
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+        align-self: center;
+    }
+
+    .grid-form::after {
+        content: 'Links below\A\2193';
+        display: flex;
+        flex-direction: column;
+        white-space: pre;
+        font-size: 1.4rem;
+        font-family: 'Covered By Your Grace', cursive;
+        margin-top: 3rem;
+    }
+    .grid-form {
+        padding: 2rem;
+    }
+
+    header {
+        justify-content: center;
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+    footer a {
+        font-size: 1.5rem;
+    }
+    body {
+        background-size: 100vh;
+    }
+}
