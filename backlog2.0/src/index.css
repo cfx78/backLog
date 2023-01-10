@@ -178,3 +178,21 @@ footer a {
         background-size: 100vh;
     }
 }
+
+.card--img {
+    width: 10rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0.2rem solid white;
+    padding: 0%;
+    max-width: 11rem;
+}
+
+.card li {
+    list-style: none;
+    font-size: 1.5rem;
+}
