@@ -10,8 +10,9 @@
 }
 body {
     background-image: url(bkgrnd.jpg);
+
     background-color: rgba(0, 0, 0, 0.772);
-    background-blend-mode: multiply;
+    background-blend-mode: darken;
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -27,6 +28,7 @@ body {
 .log-types {
     display: inline;
     color: aqua;
+    margin: 0 0.75rem;
 }
 .B {
     font-size: 6rem;
@@ -80,6 +82,7 @@ header h2 {
     margin-bottom: 2rem;
     text-decoration: underline;
     letter-spacing: 0.5rem;
+    font-size: 4rem;
 }
 .grid-greeting p {
     letter-spacing: 0.1rem;
@@ -98,11 +101,11 @@ form h4 {
     border-bottom: 0.3rem ghostwhite solid;
     display: inline-block;
 }
-a {
+button {
     transition: all 0.25s;
 }
 
-a:hover {
+button:hover {
     letter-spacing: 0.35rem;
 }
 

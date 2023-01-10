@@ -10,14 +10,10 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.3",
-    "css": "^3.0.0",
-    "css-loader": "^6.7.3",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.6.1",
-    "sass": "^1.57.1",
-    "sass-loader": "^13.2.0"
+    "react-router-dom": "^6.6.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
