@@ -71,7 +71,7 @@ document.querySelector('.grid-item5').innerHTML =
 
 //* Factory Function
 
-let user05 = greetUser('buckXP', 'bxp@yahoo.com', 'password');
+let user05 = greetUser('bud', 'bxp@yahoo.com', 'password');
 console.log(user05.cnslMsg());
 document.querySelector('.grid-item6').innerHTML =
 	'<p>' + user05.cnslMsg() + '</p>';
@@ -93,3 +93,7 @@ Promise.all([p1, p2, p3])
 	.catch((err) => {
 		console.log(err);
 	});
+
+let example = function lastUser(name, height) {
+	return name + ' ' + height;
+};

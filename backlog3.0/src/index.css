@@ -1,3 +1,7 @@
 body > #root > div {
-    height: 100vh;
+    max-height: 100vh;
+    max-width: 100%;
+}
+.modal-content {
+    background: black;
 }
