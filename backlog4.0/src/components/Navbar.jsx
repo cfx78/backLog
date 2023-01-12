@@ -1,6 +1,6 @@
 function Navbar() {
     const styles = {
-        boxShadow: '1px 31px 34px 0px rgba(0, 0, 0, 0.82)',
+        boxShadow: '1px 10px 14px 0px rgba(0, 0, 0, 0.82)',
     }
 
     return (

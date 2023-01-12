@@ -20,7 +20,7 @@ function Search() {
             }
 
             fetch(
-                'https://rawg-video-games-database.p.rapidapi.com/games?key=d9991dfac1714c41ae89026fc3efc4ec&page_size=2"',
+                'https://rawg-video-games-database.p.rapidapi.com/games?key=d9991dfac1714c41ae89026fc3efc4ec&page_size=12',
                 options
             )
                 .then((response) => response.json())
