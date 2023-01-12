@@ -2,10 +2,10 @@ import React from 'react'
 
 function InputSearch() {
     return (
-        <div>
+        <div className="search--container">
             <label
                 htmlFor="search--box"
-                className="text-black form-label display-2"
+                className="text-black form-label display-2 mt-5"
             >
                 search
             </label>
