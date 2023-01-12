@@ -41,7 +41,8 @@ main {
     max-height: 7.25rem;
 }
 .card--container {
-    margin-bottom: 12rem;
+    margin-bottom: 4rem;
+    margin-top: 3rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     max-width: 65rem;
