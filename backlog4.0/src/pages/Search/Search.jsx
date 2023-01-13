@@ -30,7 +30,7 @@ function Search() {
         },
         [0]
     )
-    console.log(gameData)
+
     const gameCards = gameData.map(function (game) {
         return (
             <Card
