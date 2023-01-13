@@ -5,7 +5,7 @@ function InputSearch() {
         <div className="search--container">
             <label
                 htmlFor="search--box"
-                className="text-black form-label display-2 mt-5"
+                className="text-black form-label display-2 mb-3"
             >
                 search
             </label>
@@ -17,7 +17,7 @@ function InputSearch() {
             />
             <button
                 type="submit"
-                className="mt-3 btn btn-lg btn-outline-secondary"
+                className="mt-4 btn btn-lg btn-outline-secondary"
             >
                 Submit
             </button>
