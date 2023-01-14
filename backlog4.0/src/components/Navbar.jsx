@@ -7,10 +7,14 @@ function Navbar() {
         <div
             style={styles}
             className="d-flex justify-content-center align-items-center bg-black
-        p-1 nav--container"
+        p-1 nav--container border-top border-bottom border-4 border-dark-subtle "
         >
             <nav className="navbar">
-                <p className="fw-semibold text-secondary  display-1 heading">
+                <p
+                    className="
+                p-3 fw-semibold text-secondary  display-1 heading
+                text-decoration-underline pb-4 "
+                >
                     Backlog
                 </p>
             </nav>

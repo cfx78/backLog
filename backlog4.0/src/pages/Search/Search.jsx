@@ -20,7 +20,7 @@ function Search() {
             }
 
             fetch(
-                'https://rawg-video-games-database.p.rapidapi.com/games?key=d9991dfac1714c41ae89026fc3efc4ec&page_size=12',
+                'https://rawg-video-games-database.p.rapidapi.com/games?key=d9991dfac1714c41ae89026fc3efc4ec',
                 options
             )
                 .then((response) => response.json())
@@ -43,7 +43,7 @@ function Search() {
         )
     })
     return (
-        <div className=" bg-dark text-bg-dark">
+        <div className="border border-top-0 border-4 border-dark-subtle bg-dark text-bg-dark">
             <Navbar />
             <main>
                 <InputSearch />

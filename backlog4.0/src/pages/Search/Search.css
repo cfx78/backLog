@@ -13,15 +13,25 @@ main {
 .heading {
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: rgba(255, 255, 255, 0.42);
-    text-shadow: 3px 3px 6px rgb(213, 204, 204);
+
+    text-shadow: 0px 0px 0 rgb(136, 136, 136), 0px -1px 0 rgb(124, 124, 124),
+        0px -2px 0 rgb(112, 112, 112), 0px -3px 0 rgb(100, 100, 100),
+        0px -4px 0 rgb(88, 88, 88), 0px -5px 0 rgb(75, 75, 75),
+        0px -6px 0 rgb(63, 63, 63), 0px -7px 0 rgb(51, 51, 51),
+        0px -8px 0 rgb(39, 39, 39), 0px -9px 0 rgb(27, 27, 27),
+        0px -10px 0 rgb(15, 15, 15), 0px -11px 10px rgba(255, 255, 255, 0.78),
+        0px -11px 1px rgba(255, 255, 255, 0.5),
+        0px 0px 10px rgba(255, 255, 255, 0.2);
+
+    border: 0.35rem groove #464545;
 }
 .search--container {
     position: relative;
     margin-top: -6rem;
 }
 .card {
-    max-width: 13rem;
-    min-width: 12.9rem;
+    max-width: 14rem;
+    min-width: 13.9rem;
     max-height: 16.75rem;
     min-height: 16.75rem;
     font-size: 0.65rem;
@@ -54,9 +64,12 @@ main {
     max-height: 2rem;
     font-size: 0.8rem;
     background-color: rgb(220, 210, 210);
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    vertical-align: middle;
+    display: table-cell;
 }
 
 .card li:last-of-type {
     padding-bottom: 2.25rem;
+    line-height: 1rem;
 }
