@@ -46,7 +46,7 @@ function Search() {
         <div className="border border-top-0 border-4 border-dark-subtle bg-dark text-bg-dark">
             <Navbar />
             <main>
-                <InputSearch />
+                <InputSearch setGameData={setGameData} />
                 <div className="card--container">{gameCards}</div>
             </main>
         </div>

@@ -26,3 +26,9 @@ p {
 .modal--header {
     font-weight: 600;
 }
+
+@media screen and (max-width: 391px) {
+    p {
+        font-size: 5.5rem;
+    }
+}

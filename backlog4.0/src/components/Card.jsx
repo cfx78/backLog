@@ -4,11 +4,17 @@ function Card(props) {
         <div>
             <div className="card">
                 <img src={props.image} className="card-img-top" alt="..." />
-                <div className="card-body">
-                    <ul className="list-group list-group-flush">
-                        <li className="list-group-item">{props.name}</li>
-                        <li className="list-group-item">{props.released}</li>
-                        <li className="list-group-item">{props.meta}</li>
+                <div className="card-body ">
+                    <ul className="list-group list-group-flush text-center">
+                        <li className="list-group-item d-flex justify-content-center align-items-center border-0">
+                            {props.name}
+                        </li>
+                        <li className="list-group-item d-flex justify-content-center align-items-center border-0">
+                            {props.released}
+                        </li>
+                        <li className="list-group-item d-flex justify-content-center align-items-center border-0">
+                            {props.meta}
+                        </li>
                     </ul>
                 </div>
             </div>
