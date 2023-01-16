@@ -72,7 +72,8 @@ main {
 .card li {
     font-size: 1rem;
     background-color: rgb(220, 210, 210);
-    font-family: 'Comic Sans MS', 'Comic Sans', sans-serif;
+    font-family: 'Comic Neue', cursive;
+    font-weight: 700;
     vertical-align: middle;
     display: flex;
     justify-content: center;
@@ -92,7 +93,7 @@ main {
     line-height: 1.8rem;
 } */
 
-@media screen and (max-width: 391px) {
+@media screen and (max-width: 429px) {
     .card--container {
         display: flex;
         flex-direction: column;
@@ -104,14 +105,45 @@ main {
     }
     .card li {
         min-height: 3.5rem;
-
+        padding: 1.8rem;
         display: table-cell;
         font-size: 1.25rem;
     }
     .card li:first-of-type {
-        font-size: 2.35vmax;
+        font-size: 1.85vmax;
     }
     .card img {
         min-height: 12.25rem;
+    }
+}
+
+@media screen and (max-width: 927px) {
+    .card--container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    /* .card li:first-of-type {
+        font-size: 3vmax;
+    } */
+}
+@media screen and (max-width: 668px) {
+    .card--container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card li {
+        font-size: 1.5rem;
+        min-height: 2.85rem;
+    }
+    .card li:first-of-type {
+        font-size: 2.5vmax;
+    }
+}
+
+@media screen and (min-width: 809px) and (max-width: 1081px) {
+    .card li {
+        font-size: 1.2rem;
+        min-height: 2.85rem;
+    }
+    .card li:first-of-type {
+        font-size: 1.7vmax;
     }
 }
