@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 function Card(props) {
     const getBadgeColor = (rating) => {
-        if (rating >= 76) {
+        if (rating >= 80) {
             return `text-bg-success`
         } else if (rating <= 59) {
             return `text-bg-danger`

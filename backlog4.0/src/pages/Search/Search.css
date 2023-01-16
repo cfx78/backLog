@@ -70,10 +70,10 @@ main {
 }
 
 .card li {
-    font-size: 1rem;
+    font-size: 1.35rem;
     background-color: rgb(220, 210, 210);
     font-family: 'Comic Neue', cursive;
-
+    padding: 1.5rem;
     vertical-align: middle;
     display: flex;
     justify-content: center;
@@ -84,7 +84,7 @@ main {
     max-height: 3.75vmin;
 }
 .card li:first-of-type {
-    font-size: 1.25vmin;
+    font-size: 2.2vmin;
     font-weight: 700;
 }
 /* .card li:last-of-type {
@@ -146,5 +146,18 @@ main {
     }
     .card li:first-of-type {
         font-size: 1.7vmax;
+    }
+}
+
+@media screen and (max-width: 820px) and (min-width: 669px) {
+    .card li {
+        padding: 1.5rem;
+    }
+    .card li {
+        font-size: 1.5rem;
+        min-height: 2.85rem;
+    }
+    .card li:first-of-type {
+        font-size: 2vmax;
     }
 }
