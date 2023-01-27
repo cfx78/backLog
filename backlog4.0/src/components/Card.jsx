@@ -12,7 +12,12 @@ function Card(props) {
 
     return (
         <div>
-            <div className="card">
+            <div
+                onClick={() => {
+                    console.log(props.name)
+                }}
+                className="card"
+            >
                 <img src={props.image} className="card-img-top" alt="..." />
                 <div className="card-body ">
                     <ul className="list-group list-group-flush text-center">
