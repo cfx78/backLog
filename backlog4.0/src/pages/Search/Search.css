@@ -33,11 +33,14 @@ main {
     position: relative;
     margin-top: -6rem;
 }
+.btn {
+    margin-top: 0.7rem;
+}
 .card {
     max-width: 14rem;
-    min-width: 13.9rem;
-    max-height: 16.75rem;
-    min-height: 16.75rem;
+
+    max-height: 21.75rem;
+
     font-size: 0.65rem;
     background-color: rgb(0, 0, 0);
     transform-style: preserve-3d;
@@ -135,7 +138,7 @@ main {
         min-height: 2.85rem;
     }
     .card li:first-of-type {
-        font-size: 1.27vmax;
+        font-size: 2.27vmax;
     }
 }
 

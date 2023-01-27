@@ -12,12 +12,7 @@ function Card(props) {
 
     return (
         <div>
-            <div
-                onClick={() => {
-                    console.log(props.name)
-                }}
-                className="card"
-            >
+            <div className="card">
                 <img src={props.image} className="card-img-top" alt="..." />
                 <div className="card-body ">
                     <ul className="list-group list-group-flush text-center">
@@ -35,6 +30,14 @@ function Card(props) {
                             </span>
                         </li>
                     </ul>
+                    <button
+                        className="btn btn-outline-dark"
+                        onClick={() => {
+                            console.log(props.name)
+                        }}
+                    >
+                        Add Game
+                    </button>
                 </div>
             </div>
         </div>
