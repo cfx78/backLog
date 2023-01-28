@@ -12,10 +12,25 @@ p {
     font-family: 'Quicksand', sans-serif;
 }
 
+small {
+    font-size: 2rem;
+    font-family: 'Quicksand', sans-serif;
+}
+
+label {
+    color: black;
+    font-weight: 200;
+}
+
 .btn--login {
     font-family: 'Quicksand', sans-serif;
     font-size: 2.5rem;
     font-weight: 500;
+}
+
+.btn--signUp {
+    font-size: 1.75rem;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .modal {

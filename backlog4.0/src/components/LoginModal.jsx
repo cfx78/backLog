@@ -7,16 +7,16 @@ function LoginModal() {
                 type="button"
                 className="btn btn--login btn-outline-light btn-lg"
                 data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
+                data-bs-target="#loginModal"
             >
                 Login
             </button>
 
             <div
                 className="modal fade"
-                id="exampleModal"
+                id="loginModal"
                 tabIndex="-1"
-                aria-labelledby="LoginModal"
+                aria-labelledby="Login Modal"
                 aria-hidden="true"
             >
                 <div className="modal-dialog modal-dialog-centered">
@@ -32,7 +32,7 @@ function LoginModal() {
                                  modal-title fs-1"
                                 id="LoginModal"
                             >
-                                Welcome
+                                Welcome Back
                             </p>
                         </div>
                         <div className="modal-body">
