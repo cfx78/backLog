@@ -1,6 +1,27 @@
+import { signInWithEmailAndPassword } from 'firebase/auth'
 import React from 'react'
-
+import { useState } from 'react'
+import { auth } from '../../Firebase.config'
+import { useNavigate } from 'react-router-dom'
 function LoginModal() {
+    const [loginEmail, setLoginEmail] = useState('')
+    const [loginPassword, setLoginPassword] = useState('')
+    const navigate = useNavigate()
+
+    const login = async () => {
+        try {
+            const user = await signInWithEmailAndPassword(
+                auth,
+                loginEmail,
+                loginPassword
+            )
+            navigate('/search')
+            console.log(user.user.email)
+        } catch (error) {
+            console.log(error.message)
+        }
+    }
+
     return (
         <div>
             <button
@@ -42,6 +63,9 @@ function LoginModal() {
                                     className="form-control"
                                     id="floatingInput"
                                     placeholder="name@example.com"
+                                    onChange={(e) => {
+                                        setLoginEmail(e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="floatingInput">
                                     Email address
@@ -53,6 +77,9 @@ function LoginModal() {
                                     className="form-control"
                                     id="floatingPassword"
                                     placeholder="Password"
+                                    onChange={(e) => {
+                                        setLoginPassword(e.target.value)
+                                    }}
                                 />
                                 <label htmlFor="floatingPassword">
                                     Password
@@ -67,7 +94,11 @@ function LoginModal() {
                             >
                                 Close
                             </button>
-                            <button type="button" className="btn btn-secondary">
+                            <button
+                                onClick={login}
+                                type="button"
+                                className="btn btn-secondary"
+                            >
                                 Save changes
                             </button>
                         </div>
