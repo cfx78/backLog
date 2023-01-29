@@ -162,9 +162,9 @@ main {
     .card--container {
         grid-template-columns: repeat(3, 1fr);
     }
-    /* .card li:first-of-type {
-        font-size: 3vmax;
-    } */
+    .card li:first-of-type {
+        font-size: 12.2rem;
+    }
 }
 @media screen and (max-width: 668px) {
     .card--container {
@@ -185,7 +185,7 @@ main {
         min-height: 2.85rem;
     }
     .card li:first-of-type {
-        font-size: 1.27vmax;
+        font-size: 1.27rem;
     }
 }
 
@@ -198,6 +198,6 @@ main {
         min-height: 2.85rem;
     }
     .card li:first-of-type {
-        font-size: 1.27vmax;
+        font-size: 1.27rem;
     }
 }

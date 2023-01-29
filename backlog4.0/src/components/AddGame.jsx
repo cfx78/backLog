@@ -58,7 +58,11 @@ function AddGame(props) {
                             >
                                 Close
                             </button>
-                            <button type="button" className="btn btn-primary">
+                            <button
+                                onClick={console.log(props.name)}
+                                type="button"
+                                className="btn btn-primary"
+                            >
                                 Save changes
                             </button>
                         </div>

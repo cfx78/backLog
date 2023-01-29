@@ -1,12 +1,15 @@
 import { useState } from 'react'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
-import { auth } from '../../Firebase.config'
+import { auth, db } from '../../Firebase.config'
 import { useNavigate } from 'react-router-dom'
+import { setDoc, doc } from 'firebase/firestore'
 
 function SignUpModal() {
     const [registerEmail, setRegisterEmail] = useState('')
     const [registerPassword, setRegisterPassword] = useState('')
     const navigate = useNavigate()
+    // const usersCollectionRef = collection(db, 'users')
+
     const register = async () => {
         try {
             const user = await createUserWithEmailAndPassword(
@@ -14,6 +17,12 @@ function SignUpModal() {
                 registerEmail,
                 registerPassword
             )
+            console.log(user.user.uid)
+            const docRef = await doc(db, 'users', user.user.uid)
+            setDoc(docRef, {
+                userEmail: registerEmail,
+            })
+
             navigate('/search')
             console.log(user.user.email)
         } catch (err) {
