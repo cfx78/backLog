@@ -1,4 +1,8 @@
+/* eslint-disable react/jsx-key */
+/* eslint-disable react/jsx-no-undef */
+/* eslint-disable react/prop-types */
 import React, { useEffect, useState } from 'react'
+import AddGame from '../../components/AddGame'
 import Card from '../../components/Card'
 import InputSearch from '../../components/InputSearch'
 import Navbar from '../../components/Navbar'
@@ -33,13 +37,21 @@ function Search() {
 
     const gameCards = gameData.map(function (game) {
         return (
-            <Card
-                key={game.id}
-                image={game.background_image}
-                name={game.name}
-                released={game.released}
-                meta={game.metacritic}
-            />
+            <div>
+                <Card
+                    key={game.name}
+                    image={game.background_image}
+                    name={game.name}
+                    released={game.released}
+                    meta={game.metacritic}
+                />
+                <AddGame
+                    key={game.name}
+                    slug={game.slug}
+                    image={game.background_image}
+                    name={game.name}
+                />
+            </div>
         )
     })
     return (

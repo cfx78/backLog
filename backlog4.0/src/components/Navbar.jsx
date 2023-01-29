@@ -15,7 +15,8 @@ function Navbar() {
                 p-3 fw-semibold text-secondary  display-1 heading
                 text-decoration-underline pb-4 "
                 >
-                    Backlog
+                    <span className="flicker-slow">B</span>ack
+                    <span className="flicker-fast">l</span>og
                 </p>
             </nav>
         </div>

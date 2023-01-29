@@ -30,14 +30,6 @@ function Card(props) {
                             </span>
                         </li>
                     </ul>
-                    <button
-                        className="btn btn-outline-dark"
-                        onClick={() => {
-                            console.log(props.name)
-                        }}
-                    >
-                        Add Game
-                    </button>
                 </div>
             </div>
         </div>
