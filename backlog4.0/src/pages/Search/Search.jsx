@@ -39,14 +39,13 @@ function Search() {
         return (
             <div>
                 <Card
-                    key={game.name}
+                    key={game.id}
                     image={game.background_image}
                     name={game.name}
                     released={game.released}
                     meta={game.metacritic}
                 />
                 <AddGame
-                    key={game.name}
                     slug={game.slug}
                     image={game.background_image}
                     name={game.name}
