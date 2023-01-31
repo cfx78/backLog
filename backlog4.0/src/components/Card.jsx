@@ -14,15 +14,15 @@ function Card(props) {
         <div>
             <div className="card">
                 <img src={props.image} className="card-img-top" alt="..." />
-                <div className="card-body ">
+                <div className="card-body  ">
                     <ul className="list-group list-group-flush text-center">
-                        <li className="list-group-item d-flex justify-content-center align-items-center border-0">
+                        <li className="list-group-item d-flex justify-content-center align-items-center p-5 display-6 border-0">
                             {props.name}
                         </li>
-                        <li className="list-group-item d-flex justify-content-center align-items-center border-0">
+                        <li className="list-group-item d-flex justify-content-center align-items-center fs-5 border-0">
                             {props.released}
                         </li>
-                        <li className="list-group-item d-flex justify-content-center align-items-center border-0">
+                        <li className="list-group-item d-flex justify-content-center align-items-center pt-4 border-0">
                             <span
                                 className={`badge ${getBadgeColor(props.meta)}`}
                             >

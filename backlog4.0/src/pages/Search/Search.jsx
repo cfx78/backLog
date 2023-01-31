@@ -7,10 +7,14 @@ import Card from '../../components/Card'
 import InputSearch from '../../components/InputSearch'
 import Navbar from '../../components/Navbar'
 import './Search.css'
+import { signOut } from 'firebase/auth'
+import { auth } from '../../../Firebase.config'
 
 function Search() {
     const [gameData, setGameData] = useState([])
-
+    const logout = async () => {
+        await signOut(auth)
+    }
     useEffect(
         function () {
             const options = {
@@ -58,6 +62,7 @@ function Search() {
             <Navbar />
             <main>
                 <InputSearch setGameData={setGameData} />
+                <button onClick={logout}>LOG OUT</button>
                 <div className="card--container">{gameCards}</div>
             </main>
         </div>
