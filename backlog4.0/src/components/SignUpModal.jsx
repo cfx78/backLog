@@ -21,6 +21,7 @@ function SignUpModal() {
             const docRef = await doc(db, 'users', user.user.uid)
             setDoc(docRef, {
                 userEmail: registerEmail,
+                games: [],
             })
 
             navigate('/search')

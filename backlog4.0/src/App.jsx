@@ -9,6 +9,7 @@ import {
 import Home from './pages/Home/Home'
 import NotFound from './pages/NotFound'
 import Search from './pages/Search/Search'
+
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route>

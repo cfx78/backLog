@@ -7,49 +7,42 @@ import Card from '../../components/Card'
 import InputSearch from '../../components/InputSearch'
 import Navbar from '../../components/Navbar'
 import './Search.css'
-import { signOut } from 'firebase/auth'
-import { auth } from '../../../Firebase.config'
 
 function Search() {
     const [gameData, setGameData] = useState([])
-    const logout = async () => {
-        await signOut(auth)
-    }
-    useEffect(
-        function () {
-            const options = {
-                method: 'GET',
-                headers: {
-                    'X-RapidAPI-Key':
-                        '57f0506ec1msh9af3927f987a346p16bdd0jsn2a42a6362eb5',
-                    'X-RapidAPI-Host':
-                        'rawg-video-games-database.p.rapidapi.com',
-                },
-            }
 
-            fetch(
-                'https://rawg-video-games-database.p.rapidapi.com/games?key=d9991dfac1714c41ae89026fc3efc4ec',
-                options
-            )
-                .then((response) => response.json())
-                .then((response) => response.results)
-                .then((games) => setGameData(games))
-                .catch((err) => console.error(err))
-        },
-        [0]
-    )
+    useEffect(function () {
+        const options = {
+            method: 'GET',
+            headers: {
+                'X-RapidAPI-Key':
+                    '57f0506ec1msh9af3927f987a346p16bdd0jsn2a42a6362eb5',
+                'X-RapidAPI-Host': 'rawg-video-games-database.p.rapidapi.com',
+            },
+        }
+
+        fetch(
+            'https://rawg-video-games-database.p.rapidapi.com/games?key=d9991dfac1714c41ae89026fc3efc4ec',
+            options
+        )
+            .then((response) => response.json())
+            .then((response) => response.results)
+            .then((games) => setGameData(games))
+            .catch((err) => console.error(err))
+    }, [])
 
     const gameCards = gameData.map(function (game) {
         return (
             <div>
                 <Card
-                    key={game.id}
+                    key={game.key}
                     image={game.background_image}
                     name={game.name}
                     released={game.released}
                     meta={game.metacritic}
                 />
                 <AddGame
+                    key={game.key}
                     slug={game.slug}
                     image={game.background_image}
                     name={game.name}
@@ -62,7 +55,6 @@ function Search() {
             <Navbar />
             <main>
                 <InputSearch setGameData={setGameData} />
-                <button onClick={logout}>LOG OUT</button>
                 <div className="card--container">{gameCards}</div>
             </main>
         </div>
