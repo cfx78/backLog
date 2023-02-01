@@ -35,7 +35,7 @@ function Search() {
         return (
             <div>
                 <Card
-                    key={game.key}
+                    key={game.name}
                     image={game.background_image}
                     name={game.name}
                     released={game.released}

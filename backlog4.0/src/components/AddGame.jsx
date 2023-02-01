@@ -1,13 +1,14 @@
 /* eslint-disable react/prop-types */
+
 import { arrayUnion, doc, updateDoc } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
 import { db } from '../../Firebase.config'
 const auth = getAuth()
-const user = auth.currentUser
+
 function AddGame(props) {
+    const docRef = doc(db, 'users', `${auth.currentUser.uid}`)
     const addGameToDoc = async () => {
         try {
-            const docRef = doc(db, 'users', `${user.uid}`)
             await updateDoc(docRef, {
                 games: arrayUnion(`${props.name}`),
             })
