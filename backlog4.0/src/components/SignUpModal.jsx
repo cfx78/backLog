@@ -22,6 +22,7 @@ function SignUpModal() {
             setDoc(docRef, {
                 userEmail: registerEmail,
                 games: [],
+                id: user.user.uid,
             })
 
             navigate('/search')
