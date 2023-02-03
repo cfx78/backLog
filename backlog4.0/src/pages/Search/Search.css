@@ -31,7 +31,19 @@ main {
 }
 .search--container {
     position: relative;
-    margin-top: -6rem;
+    margin-top: 1rem;
+}
+form {
+    margin-top: 7rem;
+}
+.results--link {
+    text-decoration: none;
+}
+.search--link {
+    text-decoration: none;
+}
+.gameList--heading {
+    margin-top: 5rem;
 }
 .btn {
     margin-top: 0.7rem;

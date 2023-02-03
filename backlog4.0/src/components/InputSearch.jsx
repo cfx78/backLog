@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
 function InputSearch(props) {
     const [searchInput, setSearchInput] = useState('')
@@ -38,19 +39,22 @@ function InputSearch(props) {
 
     return (
         <div className="search--container">
+            <NavLink
+                to="/results"
+                className="text-bg-dark border border-light
+                border-1 p-3 results--link display-2 rounded"
+            >
+                Go To Log
+            </NavLink>
+
             <form className="form" onSubmit={handleSubmit}>
-                <label
-                    htmlFor="search--box"
-                    className="text-black form-label display-2 mb-3"
-                >
-                    search
-                </label>
                 <input
                     className="bg-secondary form-control form-control-lg"
                     id="search--box"
                     type="text"
                     onChange={handleChange}
                     value={searchInput.value}
+                    placeholder="search"
                 />
                 <button
                     type="submit"

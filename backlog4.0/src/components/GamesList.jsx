@@ -3,7 +3,7 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react'
 import { getDoc, doc, onSnapshot } from 'firebase/firestore'
-
+import { NavLink } from 'react-router-dom'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import { db } from '../../Firebase.config'
 
@@ -43,7 +43,14 @@ function GamesList() {
     console.log(userGames)
     return (
         <div>
-            <h1 className="display-1">
+            <NavLink
+                to="/search"
+                className="text-bg-dark border border-light
+                border-1 p-3 search--link display-2 rounded"
+            >
+                Go To Search
+            </NavLink>
+            <h1 className="gameList--heading display-1">
                 {user.email} <br /> Backlog
             </h1>
             <br />
