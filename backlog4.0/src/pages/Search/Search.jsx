@@ -6,6 +6,7 @@ import AddGame from '../../components/AddGame'
 import Card from '../../components/Card'
 import InputSearch from '../../components/InputSearch'
 import Navbar from '../../components/Navbar'
+
 import './Search.css'
 
 function Search() {
@@ -53,7 +54,8 @@ function Search() {
     return (
         <div className="border border-top-0 border-4 border-dark-subtle bg-dark text-bg-dark">
             <Navbar />
-            <main className="vh-75">
+
+            <main className="">
                 <InputSearch setGameData={setGameData} />
                 <div className="card--container">{gameCards}</div>
             </main>

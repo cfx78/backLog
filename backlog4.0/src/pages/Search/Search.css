@@ -5,7 +5,7 @@ body > #root > div {
 main {
     display: flex;
     text-align: center;
-    margin-top: 10rem;
+    margin-top: 5rem;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -29,12 +29,17 @@ main {
 
     border: 0.35rem groove #464545;
 }
+.offCanvas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
 .search--container {
     position: relative;
-    margin-top: 1rem;
 }
 form {
-    margin-top: 7rem;
+    margin-top: 2rem;
 }
 .results--link {
     text-decoration: none;

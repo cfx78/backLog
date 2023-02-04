@@ -2,7 +2,13 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react'
-import { getDoc, doc, onSnapshot } from 'firebase/firestore'
+import {
+    getDoc,
+    doc,
+    onSnapshot,
+    updateDoc,
+    arrayRemove,
+} from 'firebase/firestore'
 import { NavLink } from 'react-router-dom'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import { db } from '../../Firebase.config'
@@ -12,7 +18,7 @@ function GamesList() {
     const [user, setUser] = useState({})
     const [userGames, setUserGames] = useState([])
     const docRef = doc(db, 'users', `${user.uid}`)
-
+    const [checked, setChecked] = useState(false)
     onAuthStateChanged(auth, setUser)
     async function setupUI() {
         const docSnap = await getDoc(docRef)
@@ -29,6 +35,37 @@ function GamesList() {
         setupUI()
     }
     useEffect(componentDidUpdate, [user])
+    function toGamesLog(game) {
+        function toggle(value) {
+            return !value
+        }
+
+        const deleteGame = async () => {
+            const docRef = doc(db, 'users', `${user.uid}`)
+            if (checked === true) {
+                await updateDoc(docRef, {
+                    games: arrayRemove(data),
+                })
+            }
+        }
+
+        return (
+            <tr>
+                <td>
+                    <input className="checkbox" type="checkbox" name="" id="" />
+                </td>
+                <td className="text-bg-dark">{game}</td>
+                <td>
+                    <button
+                        className="btn btn-outline-light"
+                        onClick={() => deleteGame(game)}
+                    >
+                        Delete Game
+                    </button>
+                </td>
+            </tr>
+        )
+    }
 
     // useEffect(() => {
     //     const setupUI = async () => {
@@ -68,20 +105,6 @@ function GamesList() {
                 </table>
             </div>
         </div>
-    )
-}
-
-function toGamesLog(game) {
-    return (
-        <tr>
-            <td>
-                <input className="checkbox" type="checkbox" name="" id="" />
-            </td>
-            <td className="text-bg-dark">{game}</td>
-            <td>
-                <button className="btn btn-outline-light">Delete Game</button>
-            </td>
-        </tr>
     )
 }
 

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import OffCanvas from './OffCanvas'
 
 function InputSearch(props) {
     const [searchInput, setSearchInput] = useState('')
@@ -46,7 +47,7 @@ function InputSearch(props) {
             >
                 Go To Log
             </NavLink>
-
+            <OffCanvas />
             <form className="form" onSubmit={handleSubmit}>
                 <input
                     className="bg-secondary form-control form-control-lg"

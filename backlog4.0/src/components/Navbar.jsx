@@ -7,7 +7,7 @@ function Navbar() {
         <div
             style={styles}
             className="d-flex justify-content-center align-items-center bg-black
-        p-1 nav--container border-top border-bottom border-4 border-dark-subtle "
+        p-1 nav--container border-top border-bottom border-4 border-dark-subtle flex-column  "
         >
             <nav className="navbar">
                 <p
