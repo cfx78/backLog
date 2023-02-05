@@ -18,7 +18,10 @@ function OffCanvas() {
                 aria-labelledby="offcanvasTopLabel"
             >
                 <div className="offcanvas-header">
-                    <h5 className="offcanvas-title" id="offcanvasTopLabel">
+                    <h5
+                        className="offcanvas-title text-center"
+                        id="offcanvasTopLabel"
+                    >
                         Welcome to BackLog!
                     </h5>
                     <button
@@ -36,9 +39,9 @@ function OffCanvas() {
                     message stating that the game was added successfully. To see
                     the games in your log, simply click the Go To Log text and
                     you will get a list of games ordered by when they were
-                    added. To delete a game from your log, you MUST CHECK THE
-                    COMPLETED CHECKBOX. Then, you can click the Delete Game
-                    button. Enjoy!
+                    added. To delete a game from your log, simply click the
+                    Delete button. Then, you can click the Save Changes on the
+                    pop up. Enjoy!
                 </div>
             </div>
         </div>

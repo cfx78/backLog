@@ -2,23 +2,18 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react'
-import {
-    getDoc,
-    doc,
-    onSnapshot,
-    updateDoc,
-    arrayRemove,
-} from 'firebase/firestore'
+import { getDoc, doc, onSnapshot } from 'firebase/firestore'
 import { NavLink } from 'react-router-dom'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import { db } from '../../Firebase.config'
+import DeleteGame from './DeleteGame'
 
 function GamesList() {
     const auth = getAuth()
     const [user, setUser] = useState({})
     const [userGames, setUserGames] = useState([])
     const docRef = doc(db, 'users', `${user.uid}`)
-    const [checked, setChecked] = useState(false)
+
     onAuthStateChanged(auth, setUser)
     async function setupUI() {
         const docSnap = await getDoc(docRef)
@@ -36,32 +31,11 @@ function GamesList() {
     }
     useEffect(componentDidUpdate, [user])
     function toGamesLog(game) {
-        function toggle(value) {
-            return !value
-        }
-
-        const deleteGame = async () => {
-            const docRef = doc(db, 'users', `${user.uid}`)
-            if (checked === true) {
-                await updateDoc(docRef, {
-                    games: arrayRemove(data),
-                })
-            }
-        }
-
         return (
             <tr>
-                <td>
-                    <input className="checkbox" type="checkbox" name="" id="" />
-                </td>
                 <td className="text-bg-dark">{game}</td>
                 <td>
-                    <button
-                        className="btn btn-outline-light"
-                        onClick={() => deleteGame(game)}
-                    >
-                        Delete Game
-                    </button>
+                    <DeleteGame name={game} />
                 </td>
             </tr>
         )
@@ -79,7 +53,7 @@ function GamesList() {
     const gamesLog = userGames.map(toGamesLog)
     console.log(userGames)
     return (
-        <div>
+        <div className="vh-100">
             <NavLink
                 to="/search"
                 className="text-bg-dark border border-light
@@ -96,7 +70,6 @@ function GamesList() {
                 <table className="table fs-4 align-middle table-dark table-striped table-bordered  table-hover">
                     <thead>
                         <tr>
-                            <th scope="col">Completed</th>
                             <th scope="col">Game</th>
                             <th scope="col">Delete</th>
                         </tr>

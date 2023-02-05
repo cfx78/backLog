@@ -1,5 +1,5 @@
 import { signInWithEmailAndPassword } from 'firebase/auth'
-import React from 'react'
+
 import { useState } from 'react'
 import { auth } from '../../Firebase.config'
 import { useNavigate } from 'react-router-dom'
@@ -7,6 +7,9 @@ function LoginModal() {
     const [loginEmail, setLoginEmail] = useState('')
     const [loginPassword, setLoginPassword] = useState('')
     const navigate = useNavigate()
+    const refreshPage = () => {
+        navigate(0)
+    }
 
     const login = async () => {
         try {
@@ -16,6 +19,7 @@ function LoginModal() {
                 loginPassword
             )
             navigate('/search')
+            refreshPage()
             console.log(user.user.email)
         } catch (error) {
             console.log(error.message)

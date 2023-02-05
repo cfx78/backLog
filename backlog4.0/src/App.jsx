@@ -10,7 +10,6 @@ import Home from './pages/Home/Home'
 import NotFound from './pages/NotFound'
 import Search from './pages/Search/Search'
 import Results from './pages/Search/Results'
-import { AuthProvider } from './assets/auth'
 
 function App() {
     const router = createBrowserRouter(
@@ -24,11 +23,7 @@ function App() {
         )
     )
 
-    return (
-        <AuthProvider>
-            <RouterProvider router={router} />
-        </AuthProvider>
-    )
+    return <RouterProvider router={router} />
 }
 
 export default App
