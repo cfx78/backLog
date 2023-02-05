@@ -1,15 +1,14 @@
 /* eslint-disable react/prop-types */
-function Card(props) {
-    const getBadgeColor = (rating) => {
-        if (rating >= 80) {
-            return `text-bg-success`
-        } else if (rating <= 59) {
-            return `text-bg-danger`
-        } else {
-            return `text-bg-warning`
-        }
+export const getBadgeColor = (rating) => {
+    if (rating >= 80) {
+        return `text-bg-success`
+    } else if (rating <= 59) {
+        return `text-bg-danger`
+    } else {
+        return `text-bg-warning`
     }
-
+}
+function Card(props) {
     return (
         <div>
             <div className="card">

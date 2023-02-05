@@ -39,7 +39,9 @@ function AddGame(props) {
                     className="text-light modal--header modal-title fs-5"
                     id="addGameModal"
                 >
-                    <span className="text-info">{props.name} </span>
+                    <span data-testid="gameName" className="text-info">
+                        {props.name}{' '}
+                    </span>
                     successfully added!
                 </p>
             )
