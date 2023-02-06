@@ -45,13 +45,10 @@ function DeleteGame(props) {
     return (
         <div>
             <button
-                onClick={() => {
-                    console.log(props.name.split(' ').join('-'))
-                }}
                 type="button"
                 className="btn addGame btn-outline-light text-bg-dark"
                 data-bs-toggle="modal"
-                data-bs-target={`#addGameModal-${props.name
+                data-bs-target={`#deleteGameModal-${props.name
                     .split(' ')
                     .join('-')}`}
             >
@@ -59,10 +56,10 @@ function DeleteGame(props) {
             </button>
 
             <div
-                className="modal fade"
-                id={`addGameModal-${props.name.split(' ').join('-')}`}
+                className="delete--modal m-0 p-0 modal fade"
+                id={`deleteGameModal-${props.name.split(' ').join('-')}`}
                 tabIndex="-1"
-                aria-labelledby="addGameLabel"
+                aria-labelledby="deleteGameLabel"
                 aria-hidden="true"
             >
                 <div className="modal-dialog modal-dialog-centered">

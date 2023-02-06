@@ -41,15 +41,6 @@ function GamesList() {
         )
     }
 
-    // useEffect(() => {
-    //     const setupUI = async () => {
-    //         const docSnap = await getDoc(docRef)
-    //         console.log(docSnap.data().games)
-    //         setUserGames(docSnap.data().games)
-    //     }
-    //     setupUI()
-    // }, [])
-    // console.log(userGames)
     const gamesLog = userGames.map(toGamesLog)
     console.log(userGames)
     return (

@@ -1,15 +1,17 @@
 import { render, screen } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
 
-import Home from './Home'
+import OffCanvas from './OffCanvas'
 
 test('renders react text', () => {
     render(
         <BrowserRouter>
             {' '}
-            <Home />
+            <OffCanvas />
         </BrowserRouter>
     )
-    const smallElement = screen.getByText(/an account/i)
-    expect(smallElement).toBeInTheDocument()
+    const h5 = screen.getByRole('heading', {
+        level: 5,
+    })
+    expect(h5).toBeInTheDocument()
 })

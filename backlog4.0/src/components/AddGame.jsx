@@ -100,7 +100,7 @@ function AddGame(props) {
                         </div>
                         <div className="modal-body">
                             <img
-                                className="addGame--image"
+                                className="img-thumbnail addGame--image"
                                 src={props.image}
                                 alt={props.name}
                             />

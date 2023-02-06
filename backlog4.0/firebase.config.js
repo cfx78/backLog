@@ -20,3 +20,24 @@ const app = initializeApp(firebaseConfig)
 export const auth = getAuth(app)
 
 export const db = getFirestore(app)
+
+export const useData = (path, transform) => {
+    const { data, isLoading, error } = useDatabaseValue(
+        path,
+        ref(database, path),
+        { subscribe: true }
+    )
+    const value = !isLoading && !error && transform ? transform(data) : data
+
+    return [value, isLoading, error]
+}
+
+export const useUserState = () => {
+    const [user, setUser] = useState()
+
+    useEffect(() => {
+        onIdTokenChanged(auth, setUser)
+    }, [])
+
+    return [user]
+}

@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import './Search.css'
+import './Search.scss'
 import Navbar from '../../components/Navbar'
 import GamesList from '../../components/GamesList'
 

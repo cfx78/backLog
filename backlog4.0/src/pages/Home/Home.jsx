@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import LoginModal from '../../components/LoginModal'
 import SignUpModal from '../../components/SignUpModal'
-import './Home.css'
+import './Home.scss'
 
 function Home() {
     return (

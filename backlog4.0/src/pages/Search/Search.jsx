@@ -7,7 +7,7 @@ import Card from '../../components/Card'
 import InputSearch from '../../components/InputSearch'
 import Navbar from '../../components/Navbar'
 
-import './Search.css'
+import './Search.scss'
 
 function Search() {
     const [gameData, setGameData] = useState([])
@@ -35,19 +35,23 @@ function Search() {
     const gameCards = gameData.map(function (game) {
         return (
             <div>
-                <Card
-                    key={game.name}
-                    image={game.background_image}
-                    name={game.name}
-                    released={game.released}
-                    meta={game.metacritic}
-                />
-                <AddGame
-                    key={game.key}
-                    slug={game.slug}
-                    image={game.background_image}
-                    name={game.name}
-                />
+                <div>
+                    <Card
+                        key={game.name}
+                        image={game.background_image}
+                        name={game.name}
+                        released={game.released}
+                        meta={game.metacritic}
+                    />
+                </div>
+                <div>
+                    <AddGame
+                        key={game.key}
+                        slug={game.slug}
+                        image={game.background_image}
+                        name={game.name}
+                    />
+                </div>
             </div>
         )
     })

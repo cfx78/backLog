@@ -8,7 +8,6 @@ function SignUpModal() {
     const [registerEmail, setRegisterEmail] = useState('')
     const [registerPassword, setRegisterPassword] = useState('')
     const navigate = useNavigate()
-    // const usersCollectionRef = collection(db, 'users')
 
     const register = async () => {
         try {
