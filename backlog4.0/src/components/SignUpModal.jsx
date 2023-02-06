@@ -8,6 +8,9 @@ function SignUpModal() {
     const [registerEmail, setRegisterEmail] = useState('')
     const [registerPassword, setRegisterPassword] = useState('')
     const navigate = useNavigate()
+    const refreshPage = () => {
+        navigate(0)
+    }
 
     const register = async () => {
         try {
@@ -25,6 +28,7 @@ function SignUpModal() {
             })
 
             navigate('/search')
+            refreshPage()
             console.log(user.user.email)
         } catch (err) {
             console.log(err.message)
