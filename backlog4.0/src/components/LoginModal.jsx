@@ -3,10 +3,13 @@ import { signInWithEmailAndPassword } from 'firebase/auth'
 import { useState } from 'react'
 import { auth } from '../../Firebase.config'
 import { useNavigate } from 'react-router-dom'
+import Alert from './Alert'
 function LoginModal() {
     const [loginEmail, setLoginEmail] = useState('')
     const [loginPassword, setLoginPassword] = useState('')
+    const [isError, setIsError] = useState(null)
     const navigate = useNavigate()
+
     const refreshPage = () => {
         navigate(0)
     }
@@ -22,7 +25,8 @@ function LoginModal() {
             refreshPage()
             console.log(user.user.email)
         } catch (error) {
-            console.log(error.message)
+            setIsError(error.message)
+            console.log(isError)
         }
     }
 
@@ -30,7 +34,7 @@ function LoginModal() {
         <div>
             <button
                 type="button"
-                className="btn btn--login btn-outline-light btn-lg"
+                className="btn btn--login btn-outline-light btn-lg "
                 data-bs-toggle="modal"
                 data-bs-target="#loginModal"
             >
@@ -47,7 +51,7 @@ function LoginModal() {
                 <div className="modal-dialog modal-dialog-centered">
                     <div className="modal-content bg-secondary">
                         <div
-                            className=" d-flex justify-content-center
+                            className=" d-flex flex-column justify-content-center
                                 align-items-center modal-header"
                         >
                             <p
@@ -59,6 +63,12 @@ function LoginModal() {
                             >
                                 Welcome Back
                             </p>
+                            {isError && (
+                                <Alert
+                                    error={isError}
+                                    setIsError={setIsError}
+                                />
+                            )}
                         </div>
                         <div className="modal-body">
                             <div className="form-floating mb-3">

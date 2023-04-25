@@ -3,10 +3,12 @@ import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { auth, db } from '../../Firebase.config'
 import { useNavigate } from 'react-router-dom'
 import { setDoc, doc } from 'firebase/firestore'
+import Alert from './Alert'
 
 function SignUpModal() {
     const [registerEmail, setRegisterEmail] = useState('')
     const [registerPassword, setRegisterPassword] = useState('')
+    const [isError, setIsError] = useState(null)
     const navigate = useNavigate()
     const refreshPage = () => {
         navigate(0)
@@ -31,7 +33,8 @@ function SignUpModal() {
             refreshPage()
             console.log(user.user.email)
         } catch (err) {
-            console.log(err.message)
+            setIsError(err.message)
+            console.log(isError)
         }
     }
 
@@ -56,7 +59,7 @@ function SignUpModal() {
                 <div className="modal-dialog modal-dialog-centered">
                     <div className="modal-content bg-secondary">
                         <div
-                            className=" d-flex justify-content-center
+                            className=" d-flex flex-column justify-content-center
                                 align-items-center modal-header"
                         >
                             <p
@@ -68,6 +71,12 @@ function SignUpModal() {
                             >
                                 Welcome
                             </p>
+                            {isError && (
+                                <Alert
+                                    error={isError}
+                                    setIsError={setIsError}
+                                />
+                            )}
                         </div>
                         <div className="modal-body">
                             <div className="form-floating mb-3">
